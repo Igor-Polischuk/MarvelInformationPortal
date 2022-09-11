@@ -1,0 +1,94 @@
+@import '../../styles/vars';
+
+.comicsList__header {
+    padding: 0 20px;
+    background-color: $dark;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 50px;
+
+    & img:first-child {
+        max-width: 152px;
+        justify-self: flex-start;
+    }
+
+    & img:last-child {
+        max-width: 133px;
+        justify-self: flex-end;
+    }
+}
+
+.comics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 55px;
+
+    @media (max-width: 710px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+
+    @media (max-width: 610px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    @media (max-width: 450px) {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+.comics__item {
+    max-width: 225px;
+    max-height: 415px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+    &-enter{
+        transform: scale(0);
+    }
+    
+    &-enter-active{
+        transform: scale(1);
+        transition: all 500ms;
+    }
+    
+    &-exit{
+        transform: scale(1);
+    }
+    
+    &-exit-active{
+        transform: scale(0);
+        transition: all 500ms;
+    }
+
+    .comics__cover {
+        transition: 0.2s box-shadow, 0.2s transform;
+        width: 100%;
+        min-height: 345px;
+        height: auto;
+
+        &:focus,
+        &:hover {
+            box-shadow: 1px 1px 15px 5px rgba($color: #000000, $alpha: 0.5);
+            transform: translateY(-10px);
+        }
+    }
+
+    .comics__title {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .comics__price {
+        font-size: 14px;
+        font-weight: bold;
+        color: rgba(#000, 0.6)
+    }
+}

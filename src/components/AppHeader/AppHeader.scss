@@ -1,0 +1,32 @@
+@import '../../styles/vars';
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 50px 0;
+    font-weight: bold;
+
+    &__title{
+        font-size: 28px;
+
+        & .red{
+            color: $main-color;
+        }
+    }
+
+    &__menu{
+        display: flex;
+        font-size: 24px;
+        gap: 12px;
+
+        &-link{
+            transition: 0.1s ease color;
+        }
+
+        &-link:hover,
+        &:active {
+            color: $main-color;
+        }
+    }
+}
+

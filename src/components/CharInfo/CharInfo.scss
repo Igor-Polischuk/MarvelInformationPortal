@@ -1,0 +1,41 @@
+.char-info{
+    padding: 25px;
+    box-shadow: 5px 5px 20px rgb(0 0 0 / 25%);
+
+    &__descr{
+        font-size: 14px;
+        margin: 15px 0;
+    }
+}
+
+.char__header{
+    display: flex;
+    gap: 25px;
+
+    & img{
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    &-name{
+        font-weight: bold;
+        font-size: 22px;
+        margin-bottom: 35px;
+    }
+    &__btn{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.char__comics{
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.char-comics__list{
+    max-height: 660px;
+    overflow: auto;
+}

@@ -1,0 +1,13 @@
+.App{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.char__content{
+    display: grid;
+    grid-template-columns: 650px 425px;
+    gap: 25px;
+    align-items: start;
+    margin-top: 50px;
+}
